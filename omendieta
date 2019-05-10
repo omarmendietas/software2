@@ -1,0 +1,123 @@
+#include <iostream>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+using namespace std;
+
+int k,v1[5],v2[5],vt[5];
+char vo[5];
+void llamar_vector();
+void llamar_vector1();
+void llamar_vector2();
+
+void operaciones();
+void mostrar();
+
+main() 
+
+{
+int op;
+    
+    do
+    {
+	
+	system("cls:");
+	 cout<<"1.llamar vector1 \n2.llamar vector 2 \n3.llamar vector 3 \n4.operaciones\n5.mostrar \n6. ABANDONAR MENU\n DIGITE UNA OPCION:";
+     cin>>(op);
+        switch(op)
+         {
+         	case 1:llamar_vector();break;
+         	case 2:llamar_vector1();break;
+         	case 3:llamar_vector2();break;
+         	case 4:operaciones();break;
+         	case 5:mostrar();break;
+         	
+          default:cout<<"no digite opcion valida:";break;
+		 }
+		  system("pause:");
+	 }while(op!=5);
+	return 0;
+}
+
+
+void llamar_vector()
+{
+		for (k=0;k<5;k++)
+		{
+			cout <<"INGRESE UN NUMERO ["<<k<<"]:";
+	    cin>> v1[k];
+	 }
+	 
+	 }
+	 void llamar_vector1()
+{
+		for (k=0;k<5;k++)
+		{
+		
+		do  
+		{
+			cout <<"digite opearacion -> ["<<k<<"]:";
+			cin >> vo[k];
+			if ( vo[k]!='+'&&vo[k]!='-'&&vo[k]!='*'&&vo[k]!='/')
+					cout <<"opearacion  no valida-> ["<<k<<"]:";
+		
+		
+		}while ( vo[k]!='+'&&vo[k]!='-'&&vo[k]!='*'&&vo[k]!='/');
+	   
+	  
+	  
+	  
+	 }
+	 
+	 }
+	 void llamar_vector2()
+{
+		for (k=0;k<5;k++)
+		{
+			cout <<"INGRESE UN NUMERO ["<<k<<"]:";
+	    cin>> v2[k];
+	 }
+	 
+	 }
+
+void operaciones()
+{
+		for (k=0;k<5;k++)
+		{
+		if ( vo[k]=='+')
+		vt[k]=v1[k]+v2[k];
+		else
+		if ( vo[k]=='-')
+		vt[k]=v1[k]-v2[k];
+		else
+			if ( vo[k]=='*')
+		vt[k]=v1[k]*v2[k];
+		else
+			if ( vo[k]=='/')
+		vt[k]=v1[k]/v2[k];
+	 }
+	 
+	 }
+	 
+void mostrar()
+
+{
+
+	for (k=0;k<5;k++)
+	cout <<"  "<<v1[k]<<"  ";
+	cout<<"\n";
+	for (k=0;k<5;k++)
+	cout <<"  "<<vo[k]<<"  ";
+	cout<<"\n";
+	for (k=0;k<5;k++)
+	cout <<"  "<<v2[k]<<"  ";
+	cout<<"\n";
+	for (k=0;k<5;k++)
+	cout <<"  "<<vt[k]<<"  ";
+	cout<<"\n";
+	
+
+	 
+	 
+}
+
+
